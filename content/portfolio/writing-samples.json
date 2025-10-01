@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "slug": "ecommerce-product-descriptions",
+      "title": "E-commerce Product Descriptions",
+      "category": "Product Descriptions",
+      "description": "Increased conversion rates by 40% for online fashion store through compelling product descriptions that highlight benefits and create emotional connections with customers.",
+      "image": "/images/portfolio/ecommerce-descriptions.jpg",
+      "link": "#",
+      "client": "Fashion Store",
+      "timeline": "4 weeks",
+      "results": "40% increase in conversions, 25% increase in AOV",
+      "skills": ["Product Copy", "E-commerce", "Conversion Optimization", "SEO"],
+      "content": "This case study demonstrates how strategic copywriting can transform product descriptions from simple feature lists into compelling sales copy that drives conversions. The project involved rewriting 50+ product descriptions for a fashion e-commerce store, resulting in a 40% increase in conversion rates and 25% increase in average order value."
+    },
+    {
+      "slug": "email-marketing-campaign",
+      "title": "Email Marketing Campaign",
+      "category": "Email Marketing",
+      "description": "Drove 300% increase in email engagement and 50% boost in sales through strategic email sequences that nurture leads from awareness to purchase.",
+      "image": "/images/portfolio/email-campaign.jpg",
+      "link": "#",
+      "client": "SaaS Startup",
+      "timeline": "6 weeks",
+      "results": "300% increase in engagement, 50% boost in MRR",
+      "skills": ["Email Marketing", "Campaign Strategy", "Automation", "Lead Nurturing"],
+      "content": "Developed and executed a comprehensive email marketing campaign for a SaaS startup, including welcome sequences, nurture campaigns, and promotional emails. The campaign resulted in a 300% increase in email engagement rates and a 50% boost in monthly recurring revenue."
+    },
+    {
+      "slug": "website-copy-redesign",
+      "title": "Website Copy Redesign",
+      "category": "Website Copy",
+      "description": "Transformed corporate website copy resulting in 60% increase in lead generation and 35% improvement in user engagement through benefit-focused messaging.",
+      "image": "/images/portfolio/website-copy.jpg",
+      "link": "#",
+      "client": "B2B Consulting Firm",
+      "timeline": "8 weeks",
+      "results": "60% increase in leads, 35% improvement in engagement",
+      "skills": ["Website Copy", "B2B Marketing", "Lead Generation", "UX Writing"],
+      "content": "Complete website copy overhaul for a B2B consulting firm, including homepage, about page, services pages, and case studies. The new copy focused on client benefits and results, leading to a 60% increase in lead generation and 35% improvement in time spent on site."
+    },
+    {
+      "slug": "social-media-strategy",
+      "title": "Social Media Content Strategy",
+      "category": "Social Media Content",
+      "description": "Built engaged community of 10K+ followers with strategic content that drives business results and establishes brand authority in the fitness industry.",
+      "image": "/images/portfolio/social-strategy.jpg",
+      "link": "#",
+      "client": "Fitness Brand",
+      "timeline": "6 months",
+      "results": "10K+ follower growth, 200% increase in traffic",
+      "skills": ["Social Media", "Content Strategy", "Community Building", "Brand Marketing"],
+      "content": "Developed and executed a comprehensive social media content strategy for a fitness brand, including content planning, copywriting, and community management. The strategy resulted in a 10K+ follower growth and 200% increase in website traffic from social media."
+    },
+    {
+      "slug": "sales-page-copy",
+      "title": "High-Converting Sales Page",
+      "category": "Sales Copy",
+      "description": "Created persuasive sales page copy that generated $50K in first month with 12% conversion rate through benefit-focused messaging and strong calls-to-action.",
+      "image": "/images/portfolio/sales-page.jpg",
+      "link": "#",
+      "client": "Online Course Creator",
+      "timeline": "3 weeks",
+      "results": "$50K first month revenue, 12% conversion rate",
+      "skills": ["Sales Copy", "Conversion Optimization", "Landing Pages", "Direct Response"],
+      "content": "Developed persuasive sales page copy for an online course launch, including headline optimization, benefit-focused copy, and strong call-to-actions. The sales page generated $50K in revenue in the first month and achieved a 12% conversion rate."
+    }
+  ]
+}

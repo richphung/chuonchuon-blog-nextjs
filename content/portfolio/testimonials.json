@@ -1,0 +1,38 @@
+[
+  {
+    "id": "testimonial-1",
+    "name": "Sarah Johnson",
+    "company": "TechStart Inc.",
+    "content": "Dang's copywriting transformed our website from a basic information page into a conversion machine. Our lead generation increased by 60% in just three months. Her strategic approach and attention to detail are unmatched.",
+    "rating": 5,
+    "image": "testimonial-1.jpg",
+    "date": "2024-01-20"
+  },
+  {
+    "id": "testimonial-2",
+    "name": "Michael Chen",
+    "company": "E-commerce Solutions",
+    "content": "Working with Dang was a game-changer for our product descriptions. She understood our brand voice perfectly and created copy that not only sells but also builds trust with our customers. Highly recommended!",
+    "rating": 5,
+    "image": "testimonial-2.jpg",
+    "date": "2024-01-15"
+  },
+  {
+    "id": "testimonial-3",
+    "name": "Emily Rodriguez",
+    "company": "Fitness Brand Co.",
+    "content": "Dang's email marketing campaigns are pure magic. She increased our email engagement by 300% and helped us build a loyal community of customers. Her creativity and strategic thinking are exceptional.",
+    "rating": 5,
+    "image": "testimonial-3.jpg",
+    "date": "2024-01-10"
+  },
+  {
+    "id": "testimonial-4",
+    "name": "David Thompson",
+    "company": "Consulting Partners",
+    "content": "Professional, reliable, and incredibly talented. Dang delivered our website copy on time and exceeded our expectations. The new copy has significantly improved our client conversion rates.",
+    "rating": 5,
+    "image": "testimonial-4.jpg",
+    "date": "2024-01-05"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "blog-writing",
+    "title": "Blog Writing",
+    "description": "Engaging, SEO-optimized blog posts that drive traffic and engagement",
+    "features": [
+      "SEO optimization",
+      "Engaging headlines",
+      "Call-to-action integration",
+      "Research and fact-checking"
+    ],
+    "price": "Starting at $50/post",
+    "category": "Content Writing",
+    "featured": true
+  },
+  {
+    "id": "website-copy",
+    "title": "Website Copy",
+    "description": "Compelling homepage, about, and services pages that convert visitors",
+    "features": [
+      "Conversion-focused copy",
+      "Brand voice alignment",
+      "User experience optimization",
+      "A/B testing recommendations"
+    ],
+    "price": "Starting at $200/page",
+    "category": "Website Copy",
+    "featured": true
+  },
+  {
+    "id": "email-marketing",
+    "title": "Email Marketing",
+    "description": "Newsletters, promotional emails, and sequences that nurture leads",
+    "features": [
+      "Email sequence creation",
+      "Subject line optimization",
+      "Personalization strategies",
+      "Conversion tracking"
+    ],
+    "price": "Starting at $100/email",
+    "category": "Email Marketing",
+    "featured": true
+  },
+  {
+    "id": "social-media-content",
+    "title": "Social Media Content",
+    "description": "Posts, captions, and stories that build your brand presence",
+    "features": [
+      "Platform-specific content",
+      "Hashtag research",
+      "Engagement optimization",
+      "Content calendar planning"
+    ],
+    "price": "Starting at $30/post",
+    "category": "Social Media",
+    "featured": true
+  },
+  {
+    "id": "product-descriptions",
+    "title": "Product Descriptions",
+    "description": "E-commerce copy that highlights benefits and drives sales",
+    "features": [
+      "Benefit-focused copy",
+      "SEO optimization",
+      "Conversion optimization",
+      "A/B testing"
+    ],
+    "price": "Starting at $25/product",
+    "category": "E-commerce",
+    "featured": true
+  },
+  {
+    "id": "sales-copy",
+    "title": "Sales Copy",
+    "description": "Landing pages and sales letters that turn prospects into customers",
+    "features": [
+      "Persuasive copywriting",
+      "Conversion optimization",
+      "Psychological triggers",
+      "A/B testing"
+    ],
+    "price": "Starting at $500/landing page",
+    "category": "Sales Copy",
+    "featured": true
+  },
+  {
+    "id": "case-studies",
+    "title": "Case Studies",
+    "description": "Client success stories that showcase your expertise and results",
+    "features": [
+      "Story-driven content",
+      "Data visualization",
+      "Client testimonials",
+      "Results-focused narrative"
+    ],
+    "price": "Starting at $300/case study",
+    "category": "Content Writing",
+    "featured": false
+  },
+  {
+    "id": "press-releases",
+    "title": "Press Releases",
+    "description": "Company announcements that get media attention and coverage",
+    "features": [
+      "Newsworthy angles",
+      "Media-friendly format",
+      "Distribution strategy",
+      "Follow-up support"
+    ],
+    "price": "Starting at $200/release",
+    "category": "PR & Communications",
+    "featured": false
+  },
+  {
+    "id": "technical-writing",
+    "title": "Technical Writing",
+    "description": "Documentation, guides, and manuals that are clear and user-friendly",
+    "features": [
+      "Complex concept simplification",
+      "User-friendly language",
+      "Step-by-step instructions",
+      "Visual integration"
+    ],
+    "price": "Starting at $75/hour",
+    "category": "Technical Writing",
+    "featured": false
+  },
+  {
+    "id": "content-strategy",
+    "title": "Content Strategy",
+    "description": "Planning and content calendars that align with business goals",
+    "features": [
+      "Content audit",
+      "Strategy development",
+      "Editorial calendar",
+      "Performance tracking"
+    ],
+    "price": "Starting at $500/strategy",
+    "category": "Strategy",
+    "featured": false
+  },
+  {
+    "id": "ghostwriting",
+    "title": "Ghostwriting",
+    "description": "Articles, books, and speeches written in your voice and style",
+    "features": [
+      "Voice matching",
+      "Research and interviews",
+      "Content development",
+      "Revision and editing"
+    ],
+    "price": "Starting at $100/hour",
+    "category": "Ghostwriting",
+    "featured": false
+  },
+  {
+    "id": "copy-editing",
+    "title": "Copy Editing",
+    "description": "Proofreading and refinement of existing content for clarity and impact",
+    "features": [
+      "Grammar and style correction",
+      "Clarity improvement",
+      "Consistency checking",
+      "Final polish"
+    ],
+    "price": "Starting at $0.10/word",
+    "category": "Editing",
+    "featured": false
+  }
+]
