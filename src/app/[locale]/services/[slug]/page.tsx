@@ -12,6 +12,23 @@ interface ServicePageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const locales = ['en', 'vi'];
+  const allParams: { locale: string; slug: string }[] = [];
+  
+  for (const locale of locales) {
+    const services = getAllServices(locale);
+    for (const service of services) {
+      allParams.push({
+        locale,
+        slug: service.slug
+      });
+    }
+  }
+  
+  return allParams;
+}
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { locale, slug } = await params;
   const service = getServiceBySlug(slug, locale);

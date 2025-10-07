@@ -13,6 +13,23 @@ interface PortfolioItemPageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const locales = ['en', 'vi'];
+  const allParams: { locale: string; slug: string }[] = [];
+  
+  for (const locale of locales) {
+    const portfolioItems = getAllPortfolioItems(locale);
+    for (const item of portfolioItems) {
+      allParams.push({
+        locale,
+        slug: item.slug
+      });
+    }
+  }
+  
+  return allParams;
+}
+
 export default async function PortfolioItemPage({ params }: PortfolioItemPageProps) {
   const { locale, slug } = await params;
   const item = getPortfolioItemBySlug(slug, locale);

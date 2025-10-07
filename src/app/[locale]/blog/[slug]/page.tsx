@@ -14,6 +14,23 @@ interface BlogPostPageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const locales = ['en', 'vi'];
+  const allParams: { locale: string; slug: string }[] = [];
+  
+  for (const locale of locales) {
+    const posts = await getAllBlogPosts(locale);
+    for (const post of posts) {
+      allParams.push({
+        locale,
+        slug: post.slug
+      });
+    }
+  }
+  
+  return allParams;
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { locale, slug } = await params;
   const post = await getBlogPostBySlug(slug, locale);

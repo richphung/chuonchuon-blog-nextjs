@@ -13,6 +13,23 @@ interface CategoryPageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const locales = ['en', 'vi'];
+  const allParams: { locale: string; slug: string }[] = [];
+  
+  for (const locale of locales) {
+    const categories = getAllCategories(locale);
+    for (const category of categories) {
+      allParams.push({
+        locale,
+        slug: category.slug
+      });
+    }
+  }
+  
+  return allParams;
+}
+
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { locale, slug } = await params;
   const category = getCategoryBySlug(slug, locale);
