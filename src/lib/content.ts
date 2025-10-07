@@ -7,6 +7,11 @@ import { BlogPost, Category, PortfolioItem, Service, Testimonial, AboutContent }
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+// Helper to get locale-specific content directory
+function getLocaleDirectory(locale: string) {
+  return path.join(contentDirectory, locale);
+}
+
 // Markdown processing
 async function processMarkdown(content: string): Promise<string> {
   const processedContent = await remark()
@@ -15,11 +20,15 @@ async function processMarkdown(content: string): Promise<string> {
   return processedContent.toString();
 }
 
-// Blog posts
-export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const postsDirectory = path.join(contentDirectory, 'blog', 'posts');
+// Blog posts with locale support and fallback
+export async function getAllBlogPosts(locale: string = 'en'): Promise<BlogPost[]> {
+  const postsDirectory = path.join(getLocaleDirectory(locale), 'blog', 'posts');
   
+  // If locale directory doesn't exist, fallback to English
   if (!fs.existsSync(postsDirectory)) {
+    if (locale !== 'en') {
+      return getAllBlogPosts('en');
+    }
     return [];
   }
 
@@ -45,11 +54,11 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getBlogPostBySlug(slug: string, locale: string = 'en'): Promise<BlogPost | null> {
   try {
-    const fullPath = path.join(contentDirectory, 'blog', 'posts', `${slug}.md`);
+    const fullPath = path.join(getLocaleDirectory(locale), 'blog', 'posts', `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { data, content} = matter(fileContents);
     const processedContent = await processMarkdown(content);
 
     return {
@@ -58,25 +67,32 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
       ...data,
     } as BlogPost;
   } catch {
+    // Fallback to English if not found
+    if (locale !== 'en') {
+      return getBlogPostBySlug(slug, 'en');
+    }
     return null;
   }
 }
 
-export async function getFeaturedBlogPosts(): Promise<BlogPost[]> {
-  const posts = await getAllBlogPosts();
+export async function getFeaturedBlogPosts(locale: string = 'en'): Promise<BlogPost[]> {
+  const posts = await getAllBlogPosts(locale);
   return posts.filter(post => post.featured).slice(0, 4);
 }
 
-export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
-  const posts = await getAllBlogPosts();
+export async function getBlogPostsByCategory(category: string, locale: string = 'en'): Promise<BlogPost[]> {
+  const posts = await getAllBlogPosts(locale);
   return posts.filter(post => post.category === category);
 }
 
-// Categories
-export function getAllCategories(): Category[] {
-  const categoriesPath = path.join(contentDirectory, 'blog', 'categories');
+// Categories with locale support
+export function getAllCategories(locale: string = 'en'): Category[] {
+  const categoriesPath = path.join(getLocaleDirectory(locale), 'blog', 'categories');
   
   if (!fs.existsSync(categoriesPath)) {
+    if (locale !== 'en') {
+      return getAllCategories('en');
+    }
     return [];
   }
 
@@ -90,21 +106,27 @@ export function getAllCategories(): Category[] {
     });
 }
 
-export function getCategoryBySlug(slug: string): Category | null {
+export function getCategoryBySlug(slug: string, locale: string = 'en'): Category | null {
   try {
-    const fullPath = path.join(contentDirectory, 'blog', 'categories', `${slug}.json`);
+    const fullPath = path.join(getLocaleDirectory(locale), 'blog', 'categories', `${slug}.json`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     return JSON.parse(fileContents) as Category;
   } catch {
+    if (locale !== 'en') {
+      return getCategoryBySlug(slug, 'en');
+    }
     return null;
   }
 }
 
-// Portfolio
-export function getAllPortfolioItems(): PortfolioItem[] {
-  const portfolioPath = path.join(contentDirectory, 'portfolio', 'writing-samples.json');
+// Portfolio with locale support
+export function getAllPortfolioItems(locale: string = 'en'): PortfolioItem[] {
+  const portfolioPath = path.join(getLocaleDirectory(locale), 'portfolio', 'writing-samples.json');
   
   if (!fs.existsSync(portfolioPath)) {
+    if (locale !== 'en') {
+      return getAllPortfolioItems('en');
+    }
     return [];
   }
 
@@ -113,53 +135,69 @@ export function getAllPortfolioItems(): PortfolioItem[] {
     const data = JSON.parse(fileContents);
     return data.items || [];
   } catch {
+    if (locale !== 'en') {
+      return getAllPortfolioItems('en');
+    }
     return [];
   }
 }
 
-export function getFeaturedPortfolioItems(): PortfolioItem[] {
-  return getAllPortfolioItems().filter(item => item.featured).slice(0, 6);
+export function getFeaturedPortfolioItems(locale: string = 'en'): PortfolioItem[] {
+  return getAllPortfolioItems(locale).filter(item => item.featured).slice(0, 6);
 }
 
-export function getPortfolioItemsByCategory(category: string): PortfolioItem[] {
-  return getAllPortfolioItems().filter(item => item.category === category);
+export function getPortfolioItemsByCategory(category: string, locale: string = 'en'): PortfolioItem[] {
+  return getAllPortfolioItems(locale).filter(item => item.category === category);
 }
 
-// Services
-export function getAllServices(): Service[] {
-  const servicesPath = path.join(contentDirectory, 'services', 'services-list.json');
+export function getPortfolioItemBySlug(slug: string, locale: string = 'en'): PortfolioItem | null {
+  const items = getAllPortfolioItems(locale);
+  return items.find(item => item.slug === slug) || null;
+}
+
+// Services with locale support
+export function getAllServices(locale: string = 'en'): Service[] {
+  const servicesPath = path.join(getLocaleDirectory(locale), 'services', 'services-list.json');
   
   if (!fs.existsSync(servicesPath)) {
+    if (locale !== 'en') {
+      return getAllServices('en');
+    }
     return [];
   }
 
   try {
     const fileContents = fs.readFileSync(servicesPath, 'utf8');
-    const services = JSON.parse(fileContents);
-    // Map 'id' field to 'slug' field to match the Service interface
-    return services.map((service: any) => ({
+    const services = JSON.parse(fileContents) as Array<Omit<Service, 'slug'> & { id: string }>;
+    return services.map((service) => ({
       ...service,
       slug: service.id
     })) as Service[];
   } catch {
+    if (locale !== 'en') {
+      return getAllServices('en');
+    }
     return [];
   }
 }
 
-export function getFeaturedServices(): Service[] {
-  return getAllServices().filter(service => service.featured).slice(0, 6);
+export function getFeaturedServices(locale: string = 'en'): Service[] {
+  return getAllServices(locale).filter(service => service.featured).slice(0, 6);
 }
 
-export function getServiceBySlug(slug: string): Service | null {
-  const services = getAllServices();
+export function getServiceBySlug(slug: string, locale: string = 'en'): Service | null {
+  const services = getAllServices(locale);
   return services.find(service => service.slug === slug) || null;
 }
 
-// Testimonials
-export function getAllTestimonials(): Testimonial[] {
-  const testimonialsPath = path.join(contentDirectory, 'portfolio', 'testimonials.json');
+// Testimonials with locale support
+export function getAllTestimonials(locale: string = 'en'): Testimonial[] {
+  const testimonialsPath = path.join(getLocaleDirectory(locale), 'portfolio', 'testimonials.json');
   
   if (!fs.existsSync(testimonialsPath)) {
+    if (locale !== 'en') {
+      return getAllTestimonials('en');
+    }
     return [];
   }
 
@@ -167,15 +205,21 @@ export function getAllTestimonials(): Testimonial[] {
     const fileContents = fs.readFileSync(testimonialsPath, 'utf8');
     return JSON.parse(fileContents) as Testimonial[];
   } catch {
+    if (locale !== 'en') {
+      return getAllTestimonials('en');
+    }
     return [];
   }
 }
 
-// About content
-export function getAboutContent(): AboutContent | null {
-  const aboutPath = path.join(contentDirectory, 'about', 'about-content.json');
+// About content with locale support
+export function getAboutContent(locale: string = 'en'): AboutContent | null {
+  const aboutPath = path.join(getLocaleDirectory(locale), 'about', 'about-content.json');
   
   if (!fs.existsSync(aboutPath)) {
+    if (locale !== 'en') {
+      return getAboutContent('en');
+    }
     return null;
   }
 
@@ -183,12 +227,15 @@ export function getAboutContent(): AboutContent | null {
     const fileContents = fs.readFileSync(aboutPath, 'utf8');
     return JSON.parse(fileContents) as AboutContent;
   } catch {
+    if (locale !== 'en') {
+      return getAboutContent('en');
+    }
     return null;
   }
 }
 
-// Search functionality
-export async function searchContent(query: string): Promise<Array<{
+// Search functionality with locale support
+export async function searchContent(query: string, locale: string = 'en'): Promise<Array<{
   type: 'post' | 'portfolio' | 'service';
   title: string;
   excerpt: string;
@@ -208,7 +255,7 @@ export async function searchContent(query: string): Promise<Array<{
   const searchTerm = query.toLowerCase();
 
   // Search blog posts
-  const posts = await getAllBlogPosts();
+  const posts = await getAllBlogPosts(locale);
   posts.forEach(post => {
     if (
       post.title.toLowerCase().includes(searchTerm) ||
@@ -220,7 +267,7 @@ export async function searchContent(query: string): Promise<Array<{
         type: 'post',
         title: post.title,
         excerpt: post.excerpt,
-        href: `/blog/${post.slug}`,
+        href: `/${locale}/blog/${post.slug}`,
         category: post.category,
         date: post.date,
       });
@@ -228,7 +275,7 @@ export async function searchContent(query: string): Promise<Array<{
   });
 
   // Search portfolio items
-  getAllPortfolioItems().forEach(item => {
+  getAllPortfolioItems(locale).forEach(item => {
     if (
       item.title.toLowerCase().includes(searchTerm) ||
       item.description.toLowerCase().includes(searchTerm) ||
@@ -238,7 +285,7 @@ export async function searchContent(query: string): Promise<Array<{
         type: 'portfolio',
         title: item.title,
         excerpt: item.description,
-        href: `/portfolio/${item.slug}`,
+        href: `/${locale}/portfolio/${item.slug}`,
         category: item.category,
         date: item.date,
       });
@@ -246,7 +293,7 @@ export async function searchContent(query: string): Promise<Array<{
   });
 
   // Search services
-  getAllServices().forEach(service => {
+  getAllServices(locale).forEach(service => {
     if (
       service.title.toLowerCase().includes(searchTerm) ||
       service.description.toLowerCase().includes(searchTerm) ||
@@ -256,7 +303,7 @@ export async function searchContent(query: string): Promise<Array<{
         type: 'service',
         title: service.title,
         excerpt: service.description,
-        href: `/services/${service.slug}`,
+        href: `/${locale}/services/${service.slug}`,
         category: service.category,
       });
     }
@@ -264,13 +311,6 @@ export async function searchContent(query: string): Promise<Array<{
 
   return results;
 }
-
-// Portfolio specific functions
-export function getPortfolioItemBySlug(slug: string): PortfolioItem | null {
-  const items = getAllPortfolioItems();
-  return items.find(item => item.slug === slug) || null;
-}
-
 
 // Utility functions
 export function formatDate(dateString: string): string {

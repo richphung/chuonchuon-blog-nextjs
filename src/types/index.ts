@@ -67,7 +67,7 @@ export interface AboutContent {
   tagline: string;
   introduction?: string;
   bio: string;
-  headshot?: string;
+  image?: string;
   skills: string[];
   experience: {
     title: string;

@@ -2,28 +2,41 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Services', href: '/services' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
-];
-
-export default function Header() {
+export default function Header({ locale }: { locale: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const t = useTranslations('nav');
+  const pathname = usePathname();
+
+  const navigation = [
+    { name: t('home'), href: `/${locale}` },
+    { name: t('blog'), href: `/${locale}/blog` },
+    { name: t('portfolio'), href: `/${locale}/portfolio` },
+    { name: t('services'), href: `/${locale}/services` },
+    { name: t('about'), href: `/${locale}/about` },
+    { name: t('contact'), href: `/${locale}/contact` },
+  ];
+
+  // Check if the current path matches the nav item
+  const isActive = (href: string) => {
+    if (href === `/${locale}`) {
+      return pathname === `/${locale}`;
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className="bg-white shadow-md border-b-2 border-primary-300 sticky top-0 z-[100]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href={`/${locale}`} className="flex items-center">
               <span className="text-2xl font-bold text-primary-600">
                 Dang Thi Quynh Huong
               </span>
@@ -31,20 +44,32 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex space-x-2 items-center">
+            {navigation.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    'px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200',
+                    active
+                      ? 'bg-primary-600 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-200 hover:text-primary-800'
+                  )}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+            
+            {/* Language Switcher */}
+            <LanguageSwitcher currentLocale={locale} />
           </nav>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher currentLocale={locale} />
             <button
               type="button"
               className="text-gray-600 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 p-2"
@@ -65,17 +90,25 @@ export default function Header() {
           'md:hidden',
           mobileMenuOpen ? 'block' : 'hidden'
         )}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-primary-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white border-t border-primary-200">
+            {navigation.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    'block px-4 py-3 text-base font-semibold rounded-lg transition-all duration-200',
+                    active
+                      ? 'bg-primary-600 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-primary-100 hover:text-primary-800'
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

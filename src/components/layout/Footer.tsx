@@ -1,17 +1,25 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { Linkedin, Mail, ExternalLink } from 'lucide-react';
 
-const navigation = {
-  main: [
-    { name: 'Home', href: '/' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ],
-  social: [
+export default function Footer({ locale }: { locale: string }) {
+  const t = useTranslations('nav');
+  const tFooter = useTranslations('footer');
+  const tContact = useTranslations('contact.info');
+
+  const navigation = [
+    { name: t('home'), href: `/${locale}` },
+    { name: t('blog'), href: `/${locale}/blog` },
+    { name: t('portfolio'), href: `/${locale}/portfolio` },
+    { name: t('services'), href: `/${locale}/services` },
+    { name: t('about'), href: `/${locale}/about` },
+    { name: t('contact'), href: `/${locale}/contact` },
+  ];
+
+  const social = [
     {
       name: 'LinkedIn',
       href: 'https://linkedin.com/in/dangquynhhuong',
@@ -27,13 +35,13 @@ const navigation = {
       href: 'mailto:contact@dangquynhhuong.com',
       icon: Mail,
     },
-  ],
-};
+  ];
 
-export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gradient-to-br from-primary-100 via-accent-lavender-light to-primary-200 border-t-2 border-primary-400 mt-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
@@ -41,10 +49,10 @@ export default function Footer() {
               Dang Thi Quynh Huong
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Professional copywriter and content creator helping businesses turn ideas into words that convert.
+              {tFooter('builtWith')}
             </p>
             <div className="flex space-x-4">
-              {navigation.social.map((item) => (
+              {social.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -65,7 +73,7 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {navigation.main.map((item) => (
+              {navigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -81,10 +89,10 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              Get In Touch
+              {tContact('title')}
             </h3>
             <div className="space-y-2 text-sm text-gray-600">
-              <p>Ready to transform your content?</p>
+              <p>{tContact('subtitle')}</p>
               <p>
                 <a
                   href="mailto:contact@dangquynhhuong.com"
@@ -101,22 +109,8 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">
-              © 2024 Dang Thi Quynh Huong. All rights reserved.
+              {tFooter('copyright', { year: currentYear })}
             </p>
-            <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link
-                href="/privacy"
-                className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200"
-              >
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>

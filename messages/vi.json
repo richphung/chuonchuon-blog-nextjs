@@ -1,0 +1,215 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "blog": "Blog",
+    "portfolio": "Hồ Sơ",
+    "services": "Dịch Vụ",
+    "about": "Giới Thiệu",
+    "contact": "Liên Hệ"
+  },
+  "common": {
+    "readMore": "Đọc Thêm",
+    "learnMore": "Tìm Hiểu Thêm",
+    "viewAll": "Xem Tất Cả",
+    "loading": "Đang Tải...",
+    "notFound": "Không Tìm Thấy",
+    "backToHome": "Về Trang Chủ",
+    "viewAllPosts": "Xem Tất Cả Bài Viết",
+    "viewAllServices": "Xem Tất Cả Dịch Vụ"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Biến Ý Tưởng Thành Nội Dung Chuyển Đổi",
+      "description": "Chuyên gia viết nội dung chuyên nghiệp giúp doanh nghiệp biến ý tưởng thành nội dung hấp dẫn mang lại kết quả.",
+      "cta": {
+        "viewWork": "Xem Hồ Sơ",
+        "hireMe": "Thuê Tôi",
+        "readBlog": "Đọc Blog"
+      }
+    },
+    "featuredPosts": {
+      "title": "Bài Viết Mới Nhất",
+      "subtitle": "Thông tin, mẹo và chiến lược giúp bạn tạo nội dung chuyển đổi.",
+      "blogImage": "Hình Blog",
+      "samplePost": "Bài Viết Mẫu",
+      "sampleExcerpt": "Đây là đoạn trích bài viết mẫu thể hiện phong cách và bố cục nội dung...",
+      "copywriting": "Viết Quảng Cáo",
+      "minRead": "phút đọc"
+    },
+    "services": {
+      "title": "Dịch Vụ Của Tôi",
+      "subtitle": "Dịch vụ viết toàn diện giúp doanh nghiệp của bạn phát triển và chuyển đổi."
+    },
+    "about": {
+      "title": "Giới Thiệu",
+      "defaultBio": "Tôi là một chuyên gia viết nội dung đầy đam mê với thành tích đã được chứng minh trong việc giúp doanh nghiệp biến ý tưởng thành nội dung hấp dẫn mang lại kết quả. Với chuyên môn trong nhiều ngành và phong cách viết, tôi mang đến cách tiếp cận chiến lược cho mỗi dự án.",
+      "readFullStory": "Đọc Toàn Bộ Câu Chuyện",
+      "professionalHeadshot": "Ảnh Chuyên Nghiệp"
+    },
+    "cta": {
+      "title": "Sẵn Sàng Chuyển Đổi Nội Dung Của Bạn?",
+      "subtitle": "Hãy cùng hợp tác để tạo nội dung chuyển đổi và phát triển doanh nghiệp của bạn.",
+      "getInTouch": "Liên Hệ",
+      "viewPortfolio": "Xem Hồ Sơ"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thông tin và mẹo cho nội dung tốt hơn",
+    "searchPlaceholder": "Tìm bài viết...",
+    "filterByCategory": "Lọc Theo Danh Mục",
+    "allCategories": "Tất Cả Danh Mục",
+    "noResults": "Không tìm thấy bài viết",
+    "noResultsMessage": "Thử điều chỉnh tiêu chí tìm kiếm hoặc lọc của bạn.",
+    "readMore": "Đọc Thêm",
+    "readTime": "{minutes} phút đọc",
+    "author": "Tác Giả",
+    "category": "Danh Mục",
+    "tags": "Thẻ",
+    "relatedPosts": "Bài Viết Liên Quan",
+    "backToBlog": "Quay Lại Blog",
+    "share": "Chia Sẻ",
+    "save": "Lưu",
+    "aboutAuthor": "Giới Thiệu",
+    "authorBio": "Chuyên gia viết nội dung chuyên nghiệp giúp doanh nghiệp biến ý tưởng thành nội dung chuyển đổi. Với chuyên môn trong nhiều ngành và phong cách viết, tôi mang đến cách tiếp cận chiến lược cho mỗi dự án.",
+    "allPosts": "Tất Cả Bài Viết",
+    "getInTouch": "Liên Hệ"
+  },
+  "portfolio": {
+    "title": "Hồ Sơ",
+    "subtitle": "Công việc gần đây và nghiên cứu điển hình",
+    "viewProject": "Xem Dự Án",
+    "client": "Khách Hàng",
+    "timeline": "Thời Gian",
+    "results": "Kết Quả",
+    "skills": "Kỹ Năng Sử Dụng",
+    "backToPortfolio": "Quay Lại Hồ Sơ"
+  },
+  "services": {
+    "title": "Dịch Vụ",
+    "subtitle": "Dịch vụ viết chuyên nghiệp phù hợp với nhu cầu của bạn",
+    "features": "Bao Gồm Gì",
+    "pricing": "Giá Cả",
+    "deliveryTime": "Thời Gian Giao Hàng",
+    "getStarted": "Bắt Đầu",
+    "backToServices": "Quay Lại Dịch Vụ"
+  },
+  "about": {
+    "title": "Giới Thiệu",
+    "subtitle": "Chuyên gia viết nội dung chuyên nghiệp",
+    "experience": "Kinh Nghiệm",
+    "skills": "Kỹ Năng & Chuyên Môn",
+    "approach": "Cách Tiếp Cận Của Tôi",
+    "contactMe": "Liên Hệ",
+    "viewWork": "Xem Hồ Sơ Của Tôi",
+    "myStory": "Câu Chuyện Của Tôi",
+    "myValues": "Giá Trị Của Tôi",
+    "funFacts": "Sự Thật Thú Vị Về Tôi",
+    "letsWorkTogether": "Hãy Cùng Làm Việc",
+    "workTogetherText": "Sẵn sàng biến ý tưởng của bạn thành nội dung hấp dẫn? Tôi rất muốn nghe về dự án của bạn và thảo luận cách chúng ta có thể đạt được mục tiêu cùng nhau.",
+    "startProject": "Bắt Đầu Dự Án",
+    "viewServices": "Xem Dịch Vụ"
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "subtitle": "Sẵn sàng biến ý tưởng thành nội dung hấp dẫn? Hãy thảo luận về dự án và tạo điều gì đó tuyệt vời cùng nhau.",
+    "form": {
+      "title": "Gửi Tin Nhắn",
+      "subtitle": "Điền vào mẫu dưới đây và tôi sẽ liên hệ lại trong vòng 24 giờ.",
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "email": "Địa Chỉ Email",
+      "company": "Công Ty",
+      "companyOptional": "Công Ty (Tùy Chọn)",
+      "service": "Dịch Vụ Quan Tâm",
+      "selectService": "Chọn dịch vụ",
+      "budget": "Ngân Sách Dự Án",
+      "selectBudget": "Chọn mức ngân sách",
+      "timeline": "Thời Gian Dự Án",
+      "selectTimeline": "Chọn thời gian",
+      "message": "Chi Tiết Dự Án",
+      "messagePlaceholder": "Cho tôi biết về dự án, mục tiêu và yêu cầu cụ thể của bạn...",
+      "required": "*",
+      "submit": "Gửi Tin Nhắn",
+      "placeholders": {
+        "firstName": "Tên của bạn",
+        "lastName": "Họ của bạn",
+        "email": "email.cua.ban@example.com",
+        "company": "Tên công ty của bạn"
+      }
+    },
+    "services": {
+      "blogWriting": "Viết Blog",
+      "websiteCopy": "Nội Dung Website",
+      "emailMarketing": "Marketing Email",
+      "socialMedia": "Nội Dung Mạng Xã Hội",
+      "productDescriptions": "Mô Tả Sản Phẩm",
+      "salesCopy": "Nội Dung Bán Hàng",
+      "caseStudies": "Nghiên Cứu Điển Hình",
+      "pressReleases": "Thông Cáo Báo Chí",
+      "technicalWriting": "Viết Kỹ Thuật",
+      "contentStrategy": "Chiến Lược Nội Dung",
+      "ghostwriting": "Viết Hộ",
+      "copyEditing": "Biên Tập",
+      "other": "Khác"
+    },
+    "budgetOptions": {
+      "under500": "Dưới $500",
+      "500to1000": "$500 - $1,000",
+      "1000to2500": "$1,000 - $2,500",
+      "2500to5000": "$2,500 - $5,000",
+      "over5000": "$5,000+",
+      "discuss": "Thảo luận"
+    },
+    "timelineOptions": {
+      "asap": "Càng Sớm Càng Tốt",
+      "oneWeek": "Trong vòng 1 tuần",
+      "twoWeeks": "Trong vòng 2 tuần",
+      "oneMonth": "Trong vòng 1 tháng",
+      "flexible": "Linh Hoạt"
+    },
+    "info": {
+      "title": "Thông Tin Liên Hệ",
+      "subtitle": "Muốn liên hệ trực tiếp? Đây là thông tin chi tiết của tôi.",
+      "email": "Email",
+      "phone": "Điện Thoại",
+      "phoneValue": "Có sẵn theo yêu cầu",
+      "location": "Vị Trí",
+      "locationValue": "Từ Xa (Toàn Cầu)",
+      "responseTime": "Thời Gian Phản Hồi",
+      "responseTimeValue": "Trong vòng 24 giờ"
+    },
+    "benefits": {
+      "title": "Tại Sao Làm Việc Với Tôi?",
+      "items": {
+        "satisfaction": "Đảm bảo hài lòng 100%",
+        "turnaround": "Thời gian hoàn thành nhanh",
+        "communication": "Giao tiếp rõ ràng trong suốt quá trình",
+        "strategic": "Cách tiếp cận chiến lược cho mọi dự án",
+        "results": "Thành tích đã được chứng minh",
+        "pricing": "Tùy chọn giá linh hoạt"
+      }
+    },
+    "faq": {
+      "title": "Câu Hỏi Thường Gặp",
+      "q1": {
+        "question": "Một dự án thường mất bao lâu?",
+        "answer": "Hầu hết các dự án được hoàn thành trong vòng 1-2 tuần, tùy thuộc vào quy mô và độ phức tạp."
+      },
+      "q2": {
+        "question": "Bạn có cung cấp chỉnh sửa không?",
+        "answer": "Có! Tôi bao gồm tối đa 2 vòng chỉnh sửa với mỗi dự án để đảm bảo sự hài lòng hoàn toàn của bạn."
+      },
+      "q3": {
+        "question": "Cấu trúc giá của bạn như thế nào?",
+        "answer": "Tôi cung cấp các tùy chọn giá linh hoạt bao gồm theo dự án, theo giờ và theo hợp đồng dài hạn."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Dang Thi Quynh Huong. Mọi quyền được bảo lưu.",
+    "builtWith": "Được xây dựng với Next.js và Tailwind CSS"
+  }
+}
+
+

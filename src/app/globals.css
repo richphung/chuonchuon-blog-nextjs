@@ -1,38 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  /* Mint color palette */
-  --primary-50: #f0fdf4;
-  --primary-100: #dcfce7;
-  --primary-200: #bbf7d0;
-  --primary-300: #86efac;
-  --primary-400: #4ade80;
-  --primary-500: #10b981;
-  --primary-600: #059669;
-  --primary-700: #047857;
-  --primary-800: #065f46;
-  --primary-900: #064e3b;
+  /* Cute & Professional Mint Palette 🌿 */
+  --primary-50: #f0fdfa;
+  --primary-100: #ccfbf1;
+  --primary-200: #99f6e4;
+  --primary-300: #5eead4;
+  --primary-400: #2dd4bf;
+  --primary-500: #14b8a6;
+  --primary-600: #0d9488;
+  --primary-700: #0f766e;
+  --primary-800: #115e59;
+  --primary-900: #134e4a;
   
-  /* Clean grays */
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  /* Warm grays */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
   
-  /* Light mint for backgrounds */
-  --mint-light: #d1fae5;
+  /* Cute accent colors */
+  --accent-coral: #fb7185;
+  --accent-lavender: #c084fc;
+  --accent-peach: #fb923c;
+  --accent-sky: #38bdf8;
   
-  /* Base colors */
-  --background: #ffffff;
-  --foreground: #1f2937;
-  --muted: #f3f4f6;
-  --border: #e5e7eb;
+  /* Special backgrounds */
+  --mint-light: #f0fdfa;
+  --mint-soft: #ccfbf1;
+  --cream: #fefce8;
+  --blush: #fff1f2;
+  
+  /* Base colors - with visible mint! */
+  --background: #f0fdfa;
+  --foreground: #262626;
+  --muted: #ccfbf1;
+  --border: #99f6e4;
 }
 
 /* Typography */
@@ -148,47 +157,57 @@ button {
 .btn-primary {
   background-color: var(--primary-500);
   color: white;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.25);
+  border-radius: 0.75rem;
 }
 
 .btn-primary:hover {
   background-color: var(--primary-600);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.35);
 }
 
 .btn-secondary {
   background-color: white;
   color: var(--primary-600);
-  border: 2px solid var(--primary-500);
+  border: 2px solid var(--primary-400);
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.1);
+  border-radius: 0.75rem;
 }
 
 .btn-secondary:hover {
   background-color: var(--primary-50);
-  border-color: var(--primary-600);
+  border-color: var(--primary-500);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.2);
 }
 
 .btn-ghost {
   background-color: transparent;
   color: var(--gray-600);
   border: 2px solid var(--gray-300);
+  border-radius: 0.75rem;
 }
 
 .btn-ghost:hover {
-  background-color: var(--gray-50);
-  color: var(--gray-900);
+  background-color: var(--mint-light);
+  color: var(--primary-700);
+  border-color: var(--primary-300);
 }
 
-/* Cards */
+/* Cards - Cute & Soft 💫 */
 .card {
   background-color: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px 0 rgba(20, 184, 166, 0.08), 0 1px 2px 0 rgba(20, 184, 166, 0.06);
   padding: 1.5rem;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(20, 184, 166, 0.05);
 }
 
 .card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(20, 184, 166, 0.15), 0 4px 8px -2px rgba(20, 184, 166, 0.1);
+  transform: translateY(-4px);
+  border-color: rgba(20, 184, 166, 0.15);
 }
 
 /* Utilities */

@@ -9,34 +9,60 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Mint color palette
+        // Cute & Professional Mint Palette 🌿
         primary: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#10b981', // Main mint green
-          600: '#059669', // Dark mint
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
+          50: '#f0fdfa',    // Lightest mint - backgrounds
+          100: '#ccfbf1',   // Super light mint
+          200: '#99f6e4',   // Light mint
+          300: '#5eead4',   // Soft mint
+          400: '#2dd4bf',   // Medium mint
+          500: '#14b8a6',   // Main mint (teal-500)
+          600: '#0d9488',   // Rich mint
+          700: '#0f766e',   // Deep mint
+          800: '#115e59',   // Dark mint
+          900: '#134e4a',   // Darkest mint
         },
-        // Clean grays
+        // Warm grays for professional feel
         gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
         },
-        // Light mint for backgrounds
-        'mint-light': '#d1fae5',
+        // Cute accent colors 🎨
+        accent: {
+          coral: {
+            light: '#fecdd3',
+            DEFAULT: '#fb7185',
+            dark: '#e11d48',
+          },
+          lavender: {
+            light: '#e9d5ff',
+            DEFAULT: '#c084fc',
+            dark: '#9333ea',
+          },
+          peach: {
+            light: '#fed7aa',
+            DEFAULT: '#fb923c',
+            dark: '#ea580c',
+          },
+          sky: {
+            light: '#bae6fd',
+            DEFAULT: '#38bdf8',
+            dark: '#0284c7',
+          },
+        },
+        // Background colors
+        'mint-light': '#f0fdfa',
+        'mint-soft': '#ccfbf1',
+        'cream': '#fefce8',
+        'blush': '#fff1f2',
       },
       fontFamily: {
         sans: [

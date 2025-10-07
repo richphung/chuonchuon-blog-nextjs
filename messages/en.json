@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "notFound": "Not Found",
+    "backToHome": "Back to Home",
+    "viewAllPosts": "View All Posts",
+    "viewAllServices": "View All Services"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Turning Ideas Into Words That Convert",
+      "description": "Professional copywriter and content creator helping businesses transform their ideas into compelling content that drives results.",
+      "cta": {
+        "viewWork": "View My Work",
+        "hireMe": "Hire Me",
+        "readBlog": "Read Blog"
+      }
+    },
+    "featuredPosts": {
+      "title": "Latest Articles",
+      "subtitle": "Insights, tips, and strategies to help you create content that converts.",
+      "blogImage": "Blog Image",
+      "samplePost": "Sample Blog Post",
+      "sampleExcerpt": "This is a sample blog post excerpt that demonstrates the content style and layout...",
+      "copywriting": "Copywriting",
+      "minRead": "min read"
+    },
+    "services": {
+      "title": "What I Offer",
+      "subtitle": "Comprehensive writing services to help your business grow and convert."
+    },
+    "about": {
+      "title": "About Me",
+      "defaultBio": "I'm a passionate copywriter and content creator with a proven track record of helping businesses transform their ideas into compelling content that drives results. With expertise across multiple industries and writing styles, I bring a strategic approach to every project.",
+      "readFullStory": "Read My Full Story",
+      "professionalHeadshot": "Professional Headshot"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Content?",
+      "subtitle": "Let's work together to create content that converts and grows your business.",
+      "getInTouch": "Get In Touch",
+      "viewPortfolio": "View Portfolio"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights and tips for better content",
+    "searchPlaceholder": "Search articles...",
+    "filterByCategory": "Filter by Category",
+    "allCategories": "All Categories",
+    "noResults": "No articles found",
+    "noResultsMessage": "Try adjusting your search or filter criteria.",
+    "readMore": "Read More",
+    "readTime": "{minutes} min read",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "relatedPosts": "Related Articles",
+    "backToBlog": "Back to Blog",
+    "share": "Share",
+    "save": "Save",
+    "aboutAuthor": "About",
+    "authorBio": "Professional copywriter and content creator helping businesses turn ideas into words that convert. With expertise across multiple industries and writing styles, I bring a strategic approach to every project.",
+    "allPosts": "All Posts",
+    "getInTouch": "Get In Touch"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "My recent work and case studies",
+    "viewProject": "View Project",
+    "client": "Client",
+    "timeline": "Timeline",
+    "results": "Results",
+    "skills": "Skills Used",
+    "backToPortfolio": "Back to Portfolio"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Professional writing services tailored to your needs",
+    "features": "What's Included",
+    "pricing": "Pricing",
+    "deliveryTime": "Delivery Time",
+    "getStarted": "Get Started",
+    "backToServices": "Back to Services"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Professional copywriter and content creator",
+    "experience": "Experience",
+    "skills": "Skills & Expertise",
+    "approach": "My Approach",
+    "contactMe": "Get In Touch",
+    "viewWork": "View My Work",
+    "myStory": "My Story",
+    "myValues": "My Values",
+    "funFacts": "Fun Facts About Me",
+    "letsWorkTogether": "Let's Work Together",
+    "workTogetherText": "Ready to transform your ideas into compelling content? I'd love to hear about your project and discuss how we can achieve your goals together.",
+    "startProject": "Start Your Project",
+    "viewServices": "View Services"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your ideas into compelling content? Let's discuss your project and create something amazing together.",
+    "form": {
+      "title": "Send Me a Message",
+      "subtitle": "Fill out the form below and I'll get back to you within 24 hours.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "company": "Company",
+      "companyOptional": "Company (Optional)",
+      "service": "Service Interested In",
+      "selectService": "Select a service",
+      "budget": "Project Budget",
+      "selectBudget": "Select budget range",
+      "timeline": "Project Timeline",
+      "selectTimeline": "Select timeline",
+      "message": "Project Details",
+      "messagePlaceholder": "Tell me about your project, goals, and any specific requirements...",
+      "required": "*",
+      "submit": "Send Message",
+      "placeholders": {
+        "firstName": "Your first name",
+        "lastName": "Your last name",
+        "email": "your.email@example.com",
+        "company": "Your company name"
+      }
+    },
+    "services": {
+      "blogWriting": "Blog Writing",
+      "websiteCopy": "Website Copy",
+      "emailMarketing": "Email Marketing",
+      "socialMedia": "Social Media Content",
+      "productDescriptions": "Product Descriptions",
+      "salesCopy": "Sales Copy",
+      "caseStudies": "Case Studies",
+      "pressReleases": "Press Releases",
+      "technicalWriting": "Technical Writing",
+      "contentStrategy": "Content Strategy",
+      "ghostwriting": "Ghostwriting",
+      "copyEditing": "Copy Editing",
+      "other": "Other"
+    },
+    "budgetOptions": {
+      "under500": "Under $500",
+      "500to1000": "$500 - $1,000",
+      "1000to2500": "$1,000 - $2,500",
+      "2500to5000": "$2,500 - $5,000",
+      "over5000": "$5,000+",
+      "discuss": "Let's discuss"
+    },
+    "timelineOptions": {
+      "asap": "ASAP",
+      "oneWeek": "Within 1 week",
+      "twoWeeks": "Within 2 weeks",
+      "oneMonth": "Within 1 month",
+      "flexible": "Flexible"
+    },
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "Prefer to reach out directly? Here are my contact details.",
+      "email": "Email",
+      "phone": "Phone",
+      "phoneValue": "Available upon request",
+      "location": "Location",
+      "locationValue": "Remote (Worldwide)",
+      "responseTime": "Response Time",
+      "responseTimeValue": "Within 24 hours"
+    },
+    "benefits": {
+      "title": "Why Work With Me?",
+      "items": {
+        "satisfaction": "100% satisfaction guarantee",
+        "turnaround": "Fast turnaround times",
+        "communication": "Clear communication throughout",
+        "strategic": "Strategic approach to every project",
+        "results": "Proven track record of results",
+        "pricing": "Flexible pricing options"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How long does a typical project take?",
+        "answer": "Most projects are completed within 1-2 weeks, depending on scope and complexity."
+      },
+      "q2": {
+        "question": "Do you offer revisions?",
+        "answer": "Yes! I include up to 2 rounds of revisions with every project to ensure your complete satisfaction."
+      },
+      "q3": {
+        "question": "What's your pricing structure?",
+        "answer": "I offer flexible pricing options including per-project, hourly, and retainer arrangements."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Dang Thi Quynh Huong. All rights reserved.",
+    "builtWith": "Built with Next.js and Tailwind CSS"
+  }
+}
+
